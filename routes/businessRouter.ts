@@ -1,7 +1,7 @@
 import express from "express";
 const router = express.Router();
 
-import businessController from "../controllers/BusinessController";
+import businessController from "../controllers/businessController";
 
 router.get("/", businessController.getAll);
 router.get("/:id", businessController.getById);
