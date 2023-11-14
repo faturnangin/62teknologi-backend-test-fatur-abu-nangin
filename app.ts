@@ -1,19 +1,11 @@
 import express from 'express';
+import router from './routes/bookRouter';
 const app = express();
-const port = 3000;
+import dotenv from 'dotenv';
+dotenv.config();
 
-app.get('/',(req, res)=>{
-    res.send(`Hello World!`);
-});
+app.use(express.json())
 
-app.get('/:id', (req, res)=>{
-    console.log(`Query Parameter: ${JSON.stringify(req.query)}`);
-    console.log(`Headers ${JSON.stringify(req.headers)}`);
-    console.log(`Method ${JSON.stringify(req.method)}`);
+app.use("/api/v1/book", router)
 
-    res.send(`Hello ${req.params.id}`)
-})
-
-app.listen(port, ()=>{
-    console.log(`listening at http://localhost:${port}`);
-})
+app.listen(process.env.PORT, () => console.log("Server is running on port 5000"))
