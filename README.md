@@ -21,16 +21,16 @@ Clone this repository:
 
 Import database provided in utils folder
 
-Install dependencies:
+Install dependencies
 
 ## ENV
 
 ```plaintext
 For local postgres server :
-POSTGRES_USER="postgres"
-POSTGRES_HOST="localhost"
-POSTGRES_PASSWORD="root"
-POSTGRES_DATABASE="business_db"
+POSTGRES_USER=
+POSTGRES_HOST=
+POSTGRES_PASSWORD=
+POSTGRES_DATABASE=
 For run it on local server
 PORT=5000 
 ```
